@@ -76,7 +76,21 @@ I wanted to make the daily academic routine as frictionless as possible. Here's 
 
 I built Campus Nova using a solid, traditional web stack. It's fast, reliable, and handles relational data beautifully.
 
-![Architecture Diagram](docs/architecture.png)
+```mermaid
+graph TD
+    A[Client Browser] -->|HTTP Requests| B(PHP API Layer)
+    B -->|SQL Queries| C[(MySQL Database)]
+    C -->|Results| B
+    B -->|HTML/JSON| A
+    
+    subgraph Frontend
+        A
+    end
+    
+    subgraph Backend
+        B
+    end
+```
 
 **How data moves:**
 1. **You** interact with the sleek HTML/CSS/JS frontend.
@@ -90,7 +104,27 @@ I built Campus Nova using a solid, traditional web stack. It's fast, reliable, a
 
 A school system needs to be strict about its data. Here's a look at how the core tables relate to each other:
 
-![Database Schema](docs/database-schema.png)
+```mermaid
+erDiagram
+    USERS ||--o{ ATTENDANCE : "logs"
+    CLASSES ||--o{ USERS : "has students"
+    CLASSES ||--o{ ASSIGNMENTS : "has"
+    USERS {
+        int id PK
+        string email
+        string role
+    }
+    CLASSES {
+        int id PK
+        string class_name
+    }
+    ATTENDANCE {
+        int id PK
+        int user_id FK
+        date date
+        string status
+    }
+```
 
 - **Users**: Handles logins and roles.
 - **Classes**: Ties teachers to subjects and groups.
