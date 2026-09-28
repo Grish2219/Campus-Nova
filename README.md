@@ -2,220 +2,218 @@
   <img src="docs/screenshots/banner.png" alt="Campus Nova Banner" width="100%" />
 
   <h1>Campus Nova</h1>
-  <p><strong>Student Career Guidance & Development Platform</strong></p>
+  <p><strong>Smart Education Platform</strong></p>
 
-  <p><em>"Discover your direction. Build your skills. Track your progress."</em></p>
+  <p><em>"Ditch the paperwork. Streamline attendance, track performance, and empower your campus."</em></p>
 
   <p>
     <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
     <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
     <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+    <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js" />
   </p>
 </div>
 
 ---
 
-## 📖 Overview
+## 📖 What is Campus Nova?
 
-Campus Nova is a comprehensive Career Guidance System that helps students make informed, data-driven decisions about their professional future. By integrating personalized assessments, career recommendations, and actionable learning roadmaps, the platform transforms career anxiety into a structured, step-by-step development journey.
+Hi there! 👋 Welcome to Campus Nova. 
 
-The platform features a modern, immersive UI with 3D elements and smooth animations to keep students engaged throughout their career exploration process.
+I built this platform to tackle a really common headache in schools and colleges: outdated, paper-heavy management. Campus Nova is a smart education platform designed to connect students, teachers, and admins into one smooth, centralized workflow. 
 
----
-
-## 🛑 The Problem
-
-Students frequently struggle with career planning due to a lack of personalized guidance:
-- **Generic Advice**: Most career advice is one-size-fits-all and ignores individual strengths.
-- **Skill Uncertainty**: Students often don't know the exact skills required for their target industry.
-- **Disconnected Learning**: Educational resources often feel disconnected from practical career outcomes.
-- **Lack of Tracking**: There is no structured way for students to monitor their preparation over time.
+Instead of passing around sign-in sheets, we use live QR codes. Instead of wondering how they're doing in class, students get a real-time dashboard. Plus, I baked in some really cool 3D visuals using Three.js and a clean glassmorphism UI to make the platform actually feel *good* to use!
 
 ---
 
-## 💡 The Approach
+## 🛑 The Problem We're Solving
 
-Campus Nova systematically bridges the gap between a student's current position and their career goals. 
-
-The student journey flows as follows:
-
-**Assess** → **Recommend** → **Explain** → **Identify Skill Gap** → **Build Roadmap** → **Track Progress** → **Reassess**
+If you've ever spent time in a traditional classroom setting, you know the struggle:
+- **Wasted Time**: Teachers lose 5-10 minutes of instruction time just calling roll or passing around attendance sheets.
+- **Disconnected Tools**: Assignments live in one place, grades in another, and attendance in a binder somewhere. 
+- **Being in the Dark**: Students usually don't know their attendance has dropped into the "danger zone" until it's too late.
+- **Admin Headaches**: Managing all this data manually is just a recipe for human error.
 
 ---
 
-## 🖼️ Product Preview
+## 💡 How Campus Nova Works
 
-*(Note: Add your actual screenshots to `docs/screenshots/`)*
+I wanted to make the daily academic routine as frictionless as possible. Here's the core loop that drives the platform:
 
-### Immersive 3D Experience
-![3D UI Demo](docs/screenshots/campus-nova-demo.gif)
+**Student Enrolls** → **Scans a Live QR Code** → **Checks Their Real-time Dashboard** → **Submits Assignments** → **Teachers Analyze the Data**
 
-### Student Dashboard
+---
+
+## 🖼️ See It In Action
+
+*(Note: Add your actual application screenshots to `docs/screenshots/`)*
+
+### The Student View
 ![Student Dashboard](docs/screenshots/dashboard.png)
 
-### Career Assessment
-![Career Assessment](docs/screenshots/assessment.png)
+### Live QR Attendance
+![QR Attendance](docs/screenshots/qr-attendance.png)
 
-### Personalized Recommendations
-![Recommendations](docs/screenshots/recommendations.png)
+### Performance Tracking
+![Performance Analytics](docs/screenshots/performance.png)
 
-### Skill Gap Analysis
-![Skill Gap Analysis](docs/screenshots/skill-gap.png)
-
-### Learning Roadmap
-![Learning Roadmap](docs/screenshots/roadmap.png)
-
-### Progress Tracking
-![Progress Tracking](docs/screenshots/progress.png)
+### Admin Control Center
+![Admin Dashboard](docs/screenshots/admin.png)
 
 ---
 
-## ✨ Key Features
+## ✨ Features I'm Proud Of
 
-- **Immersive 3D Interface**: A modern, interactive UI that engages students with smooth animations and 3D visual effects.
-- **Student Authentication & Profile Management**: Secure login and personalized dashboards for tracking individual progress.
-- **Career Assessment**: Dynamic questionnaires designed to evaluate student aptitudes, interests, and current skill levels.
-- **Personalized Recommendations**: Data-backed career path suggestions tailored to the student's assessment results.
-- **Skill Gap Analysis**: Clear visualization comparing a student's current skills against the requirements of their chosen career.
-- **Learning Roadmaps**: Actionable, step-by-step milestones to help students acquire missing skills.
-- **Progress Tracking**: Visual indicators and checklists to monitor completion of roadmap milestones.
-- **Admin Management**: Dedicated tools for administrators to manage users and oversee platform usage.
+- **Immersive 3D UI**: I wanted this to feel like a modern app, not a dusty portal from 2005. So, I integrated Three.js to give the background a subtle, interactive 3D vibe.
+- **Live QR Attendance**: This is the core of the app. Teachers generate a dynamic QR code on the spot, students scan it, and bam—attendance is logged in the database instantly.
+- **Role-Based Dashboards**: Whether you log in as a Student, Teacher, or Admin, you get a completely customized workspace that shows exactly what you need to see.
+- **Visual Analytics**: No more staring at spreadsheets. The platform turns raw data into clean charts so teachers and students know exactly where they stand.
+- **Built-in Assignment & Leave Flows**: Students can submit work or request time off directly through the platform.
 
 ---
 
-## 🏗️ Technical Architecture
+## 🏗️ Under the Hood
 
-Campus Nova utilizes a robust, traditional web architecture with a focus on modern frontend aesthetics and reliable backend processing.
+I built Campus Nova using a solid, traditional web stack. It's fast, reliable, and handles relational data beautifully.
 
-![Architecture Diagram](docs/architecture.md)
+![Architecture Diagram](docs/architecture.png)
 
-**Flow**:
-1. **Student** interacts with the **Campus Nova Web Interface** (Frontend).
-2. The **Frontend** communicates with the **Backend / API Layer** (PHP).
-3. **Business Logic** processes assessments and generates roadmaps.
-4. Data is persistently stored and retrieved from the **MySQL Database**.
+**How data moves:**
+1. **You** interact with the sleek HTML/CSS/JS frontend.
+2. That frontend talks directly to the **PHP API Layer**.
+3. PHP crunches the numbers (like checking if your attendance is below 75%).
+4. Everything is securely saved and pulled from the **MySQL Database**.
 
 ---
 
 ## 🗄️ Database Design
 
-The relational database is designed to link users with their ongoing career development data securely.
+A school system needs to be strict about its data. Here's a look at how the core tables relate to each other:
 
-![Database Schema](docs/database.md)
+![Database Schema](docs/database-schema.png)
+
+- **Users**: Handles logins and roles.
+- **Classes**: Ties teachers to subjects and groups.
+- **Attendance**: The heavy lifter logging every single scan.
+- **Assignments**: Tracks who needs to submit what.
 
 ---
 
-## 💻 Technology Stack
+## 💻 Tech Stack
 
 **Frontend**
-- HTML5
-- CSS3 (Custom animations, 3D effects)
-- JavaScript
+- HTML5 & CSS3 (Lots of custom animations and glassmorphism!)
+- JavaScript (Vanilla JS)
 - Bootstrap 5
+- Three.js & Vanta.js (For the 3D backgrounds)
 
 **Backend**
-- PHP
+- PHP (Native)
 
 **Database**
 - MySQL
 
 ---
 
-## ⚙️ Engineering Quality
+## ⚙️ Engineering Highlights
 
-- **Separation of Concerns**: Clean division between frontend views (`assets/`, `ui/`) and backend logic (`api/`, `auth/`).
-- **Database-Driven Features**: All assessments, roadmaps, and profiles are dynamically generated from relational data.
-- **Responsive Design**: The UI adapts seamlessly to mobile, tablet, and desktop viewports.
-- **Interactive UI**: Utilizing CSS animations and JavaScript to create a modern, engaging user experience without heavy dependencies.
+I really focused on keeping the codebase clean and maintainable:
+- **Clean Structure**: The frontend views are neatly separated into `student/`, `teacher/`, and `admin/` folders, while the heavy lifting happens in the `api/` folder.
+- **Dynamic Data**: Everything you see on a dashboard is pulled fresh from the database—no hardcoded metrics.
+- **Mobile First**: Since students will be scanning QR codes with their phones, I made sure the entire UI is snappy and responsive on mobile devices.
+- **DRY Code**: Reusable headers, footers, and components are tucked away in `includes/` to keep the main files clean.
 
 ---
 
-## 🔒 Security
+## 🔒 Security Measures
 
-Campus Nova implements several standard security measures:
-- **Authentication**: Secure, session-based user authentication.
-- **Password Protection**: Passwords are mathematically hashed before database storage.
-- **Role-Based Access Control**: Protected routing separating Student, Teacher, and Admin privileges.
-- **Input Validation**: Backend sanitization to prevent SQL injection and cross-site scripting (XSS).
+Handling student data means security can't be an afterthought:
+- **Session Security**: The whole app is locked down with secure session-based authentication.
+- **Hashed Passwords**: I use secure cryptographic hashing before any password touches the database.
+- **Strict Routing**: If a student tries to navigate to a teacher's URL, the router kicks them out. 
+- **Sanitized Inputs**: Built-in protections against SQL injection and XSS attacks.
 
 ---
 
 ## 📁 Project Structure
 
+Here's a quick map of the repository:
+
 ```text
 Campus-Nova/
-├── admin/               # Administrative tools and dashboard views
-├── api/                 # Backend API endpoints for asynchronous requests
-├── assets/              # CSS (including 3D/animations), JS, and images
-├── auth/                # Authentication logic (login, registration, sessions)
-├── config/              # Environment and database configuration
-├── database/            # Database schema exports and seed scripts
-├── docs/                # Architecture diagrams, database schemas, and screenshots
-├── student/             # Student-facing views and features
-├── teacher/             # Teacher/Mentor-facing views
-├── index.php            # Main application entry point
-└── README.md            # Project documentation
+├── admin/               # Admin tools (manage users, classes)
+├── api/                 # Where the PHP backend magic happens
+├── assets/              # CSS, JS, and Images (3D scripts live here too)
+├── auth/                # Login, registration, and session management
+├── config/              # DB connection strings and environment setups
+├── database/            # Contains the schema_dump.sql to get you started
+├── docs/                # Architecture diagrams and screenshots
+├── student/             # The student portal (dashboard, attendance history)
+├── teacher/             # The teacher portal (QR generator, class analytics)
+├── index.php            # The landing page
+└── README.md            # You are here!
 ```
 
 ---
 
-## 🚀 Installation & Setup
+## 🚀 Get It Running Locally
 
-### Prerequisites
-- PHP (v7.4 or higher)
-- MySQL (v5.7 or higher)
-- A local web server (Apache/XAMPP or PHP's built-in server)
+Want to spin this up on your own machine? It's pretty straightforward.
 
-### 1. Clone the repository
+### What you need:
+- PHP (v7.4+)
+- MySQL (v5.7+)
+- A local server environment like XAMPP or MAMP
+
+### Steps:
+1. **Clone it:**
 ```bash
-git clone https://github.com/Grish2219/Campus-Nova.git
+git clone https://github.com/YourUsername/Campus-Nova.git
 cd Campus-Nova
 ```
 
-### 2. Database Setup
-1. Create a MySQL database named `campus_nova`.
-2. Import the database schema:
+2. **Set up the Database:**
+Create a MySQL database named `campus_nova`, then import the schema:
 ```bash
 mysql -u root -p campus_nova < schema_dump.sql
 ```
 
-### 3. Environment Configuration
-1. Navigate to the `config/` directory.
-2. Update your database connection credentials (Host, Username, Password, Database Name) to match your local environment.
+3. **Configure the Environment:**
+Copy the template file:
+```bash
+cp .env.example .env
+```
+Open up `.env` and drop in your local database credentials.
 
-### 4. Running the Application
-Using PHP's built-in development server:
+4. **Fire it up:**
+You can just use PHP's built-in server for testing:
 ```bash
 php -S localhost:8000
 ```
-Then navigate to `http://localhost:8000` in your web browser.
+Then head over to `http://localhost:8000` in your browser.
 
 ---
 
-## 🗺️ Development Roadmap
+## 🗺️ What's Next? (Roadmap)
 
-- [x] Core Authentication & Profiles
-- [x] Assessment Engine
-- [x] Recommendation Logic
-- [x] Skill Gap Visualization
-- [x] Immersive UI/UX
-- [ ] Advanced AI-driven career matching
-- [ ] Real-time labor market API integrations
-- [ ] Automated email notification system
-- [ ] Advanced administrative analytics dashboard
+I'm always looking to improve the platform. Here is what I'm currently tracking:
+
+- [x] Secure Role-Based Authentication
+- [x] Live QR Code Attendance Engine
+- [x] Real-time Analytics Dashboards
+- [x] 3D UI Integration
+- [ ] Automated Email/SMS Alerts for low attendance
+- [ ] Deeper Administrative Analytics
+- [ ] Dedicated Native Mobile App
+- [ ] Cloud Deployment Pipeline (CI/CD)
 
 ---
 
 ## 🌐 Live Demo
 
-*Live demo coming soon.*
+*Live demo is currently in the works—check back soon!*
 
 ---
 
-## 👤 Author
-
-**Grish**  
-- GitHub: [@Grish2219](https://github.com/Grish2219)
-
 <br />
-<p align="center"><i>Turning career uncertainty into a structured path forward.</i></p>
+<p align="center"><i>Built with ❤️ to make education a little bit smarter.</i></p>
