@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/screenshots/banner.png" alt="Campus Nova Banner" width="100%" />
+  <img src="docs/screenshots/landing.png" alt="Campus Nova Banner" width="100%" />
 
   <h1>Campus Nova</h1>
   <p><strong>Smart Education Platform</strong></p>
